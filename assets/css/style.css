@@ -1,0 +1,13 @@
+.jumbotron {
+	text-align: center;
+}
+
+div[class^="col-"] {
+	background-color: #eee;
+}
+
+.outer-box div[class^="col-"] {
+	border: 1px solid #ddd;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}

@@ -1,0 +1,41 @@
+Pseudo code: Hangman
+	- Interface
+		- Word blanks
+			- Need to change based on word length
+		- Wins
+		- Guesses left
+		- Letters used
+	- Create array for words the computer can choose for the user to guess
+		- Create randomizer for computer to pick random words
+		- Generate word blanks equal to array.length
+	- Create event listener to listen to key pressed
+		- If letter is invalid character, report to user
+		- If letter is already used, report to user
+		- If letter is in word, change blank to letter
+		- If letter is not in word, reduce guesses, add to letters used
+	- When word is entirely guessed, increase wins and start new game
+	- When guesses run out, report loss and restart game
+		
+		
+
+Extras:
+	- Hangman guy
+		- 10 pictures
+	- Different arrays for different themes
+		- pick theme
+		- according to theme, load different CSS (bg image, theme colors)
+	- Interface pretty
+		- colors, font, layout
+	- Don't reuse words
+		- Push to different array
+		- Check word against that array before we use it
+		
+
+Parks: <a href='http://www.freepik.com/free-vector/background-of-mountains-at-sunset_1051640.htm'>Designed by Freepik</a>
+<a href="http://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
+
+Books: <a href='http://www.freepik.com/free-vector/shelves-with-books_768882.htm'>Designed by Freepik</a>
+<a href="http://www.freepik.com/free-photos-vectors/book">Book vector created by Freepik</a>
+
+
+
