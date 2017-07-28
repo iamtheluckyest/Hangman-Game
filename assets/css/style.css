@@ -4,6 +4,8 @@ body {
 
 .jumbotron {
 	text-align: center;
+	margin-top: 30px;
+	padding:20px;
 }
 
 .outer-box div[class^="col-"] {
@@ -15,6 +17,38 @@ body {
 	margin-right:-15px;
 	margin-left: -15px;
 	border-radius:6px;
+	padding:10px;
+	margin-bottom:30px;
+}
+
+button#parks{
+	background-color: #f2e0d2;
+	color: #6a3201;
+	border: 2px solid #6a3201;
+}
+
+button#books{
+	background-color: #f4de94;
+	color: #cb3536;
+	border: 2px solid #cb3536;
+}
+
+button#birds{
+	background-color: #afe1f8;
+	color: #c95e52;
+	border: 2px solid #c95e52;
+}
+
+button#stars{
+	background-color: #e5ddae;
+	color:#6633cc;
+	border: 2px solid #6633cc;
+}
+
+
+img {
+	width:100%;
+	padding:10px;
 }
 
 @media screen and (max-width: 768px) {

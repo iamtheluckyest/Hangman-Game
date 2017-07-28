@@ -1,0 +1,29 @@
+body {
+	background: url("../images/birds-bg.jpg") repeat fixed center;
+	background-size: 50% auto;
+	color: #c95e52;
+}
+
+.jumbotron,
+.game-holder {
+	background-color: #afe1f8;
+	border: 3px solid #c95e52;
+}
+
+img {
+	margin-right:auto;
+	margin-left:auto;
+	background-color:transparent;
+}
+
+@media screen and (max-width: 768px) {
+	.container .jumbotron,
+	.game-holder {
+		background-color: rgba(175,225,248, .8);
+	}
+	body {
+		background-size:100% auto;
+	}
+
+
+}

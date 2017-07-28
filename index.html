@@ -5,8 +5,9 @@
 	<title>Hangman</title>
 	<link rel="stylesheet" href="assets/css/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Acme|Libre+Franklin:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/books.css">
+	<link id="theme-css" rel="stylesheet" href="assets/css/start.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -14,15 +15,21 @@
 		<div class="row">
 			<div class="jumbotron">
 				<h1>Hangman</h1>
-				<h2 id="game-theme">National Parks</h2>
-				<button type="button" class="btn btn-default" id="parks">National Parks</button>
-				<button type="button" class="btn btn-default" id="books">Classic Books</button>
-				<button type="button" class="btn btn-default" id="birds">Exotic Birds</button>
-				<button type="button" class="btn btn-default" id="states">United States</button>
+				<h2 id="game-theme">Choose a theme to get started!</h2>
+				<div>
+					<br>
+					<button type="button" class="btn btn-default" id="parks">National Parks</button>
+					<button type="button" class="btn btn-default" id="books">Popular Books</button>
+					<button type="button" class="btn btn-default" id="birds">Exotic Birds</button>
+					<button type="button" class="btn btn-default" id="stars">Constellations</button>
+				</div>
 			</div>
 		</div>
+		
+		
 
-		<div class="game-holder">
+		<div class="game-holder start-hidden">
+			<hr class="hidden-sm hidden-md hidden-lg">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 					<div class="row">
@@ -34,21 +41,24 @@
 					</div>
 
 					<div class="row outer-box">
-						<div class="col-lg-8 col-md-8 col-sm-12">
+						<div class="col-lg-6 col-md-6 col-sm-12">
 							<img id="hangman-img" src="assets/images/hangman8.png" alt="Hangman Picture" class="img">
 							<br>
 							<br>
 							<p id="guesses-left"></p>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="col-lg-6 col-md-6 col-sm-12">
 							<p>Total wins: <span id="wins">0</span></p>
 							<p>Total losses: <span id="losses">0</span></p>
+							<img id="win-img">
+							<p id="win-fact"></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+	</div> <!-- End .container -->
 	
 	<script src="assets/javascript/game.js"></script>
 </body>

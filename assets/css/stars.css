@@ -1,0 +1,29 @@
+body {
+	background: url("../images/stars-bg.jpg") repeat fixed center;
+	background-size: 50% auto;
+	color: #6633cc;
+}
+
+.jumbotron,
+.game-holder {
+	background-color: #e5ddae;
+	border: 3px solid #6633cc;
+}
+
+img {
+	margin-right:auto;
+	margin-left:auto;
+	background-color:transparent;
+}
+
+@media screen and (max-width: 768px) {
+	.container .jumbotron,
+	.game-holder {
+		background-color: rgba(229, 221, 174, .9);
+	}
+	body {
+		background-size:100% auto;
+	}
+
+
+}
