@@ -96,6 +96,9 @@ $(document).ready(function() {
 		$("#game-theme").html($(this).html());
 		console.log("remainingWords inside click");
 		document.getElementById(chooseTheme).blur();
+		$("#instructions").html("Press the spacebar to start a new game.");
+		$("#blanks").empty();
+		$("#incorrect-letters-used").html("Incorrect letters used:");
 		startGame();
 	});
 });
@@ -106,7 +109,6 @@ $(document).ready(function() {
 		document.onkeyup = function(event){
 			var start = event.key;
 			if 	(start==' '){
-				console.log("hey");
 				playHangman();
 			}
 		}
