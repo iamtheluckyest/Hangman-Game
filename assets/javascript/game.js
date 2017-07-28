@@ -94,15 +94,19 @@ $(document).ready(function() {
 		theme = Object.keys(wordCollection[chooseTheme]);
 		remainingWords = theme;
 		$("#game-theme").html($(this).html());
+		console.log("remainingWords inside click");
+		document.getElementById(chooseTheme).blur();
+		startGame();
 	});
 });
 
-	startGame(); 
+	 
 
 	function startGame() {
 		document.onkeyup = function(event){
 			var start = event.key;
 			if 	(start==' '){
+				console.log("hey");
 				playHangman();
 			}
 		}
@@ -136,8 +140,7 @@ $(document).ready(function() {
 			else { 
 				var chosenWord = "";
 				chosenWord = remainingWords[Math.floor(Math.random()*remainingWords.length)];
-				remainingWords.splice(theme.indexOf(chosenWord), 1)
-				console.log(remainingWords);
+				remainingWords.splice(theme.indexOf(chosenWord), 1);
 				return chosenWord;	
 			}
 		}
