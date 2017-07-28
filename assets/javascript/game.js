@@ -49,7 +49,7 @@
 			}, 
 			Twilight: {
 				fact: "Twilight is a series of four vampire-themed fantasy romance novels by American author Stephenie Meyer. Released annually from 2005 through 2008, the four books chart the later teen years of Isabella 'Bella' Swan, a girl who moves to Forks, Washington, and falls in love with a 104-year-old vampire named Edward Cullen. The series is told primarily from Bella's point of view, with the epilogue of Eclipse and Part II of Breaking Dawn being told from the viewpoint of character Jacob Black, a werewolf.",
-				img:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mount_McKinley_and_Denali_National_Park_Road_2048px.jpg/800px-Mount_McKinley_and_Denali_National_Park_Road_2048px.jpg"
+				img:"https://upload.wikimedia.org/wikipedia/en/1/1d/Twilightbook.jpg"
 			},
 			'The Hunger Games' : {
 				fact: "The Hunger Games is a trilogy of young adult dystopian novels written by American novelist Suzanne Collins. The Hunger Games universe is a dystopia set in Panem, a country consisting of the wealthy Capitol and 12 districts in varying states of poverty. Every year, children from the districts are selected to participate in a compulsory annual televised death match called The Hunger Games.",
