@@ -1,0 +1,27 @@
+body {
+	background: url("../images/parks-bg.jpg") no-repeat fixed center;
+	background-size: 100% auto;
+	background-position: 50% 25%;
+	color: #6a3201;
+}
+
+.jumbotron,
+.game-holder {
+	background-color: #f2e0d2;
+	border: 3px solid #6a3201;
+}
+
+img {
+	margin-right:auto;
+	margin-left:auto;
+	background-color:transparent;
+}
+
+@media screen and (max-width: 768px) {
+	.container .jumbotron,
+	.game-holder {
+		background-color: rgba(242,224,210, .5);
+	}
+
+
+}

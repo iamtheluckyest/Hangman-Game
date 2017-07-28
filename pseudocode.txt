@@ -26,9 +26,6 @@ Extras:
 		- according to theme, load different CSS (bg image, theme colors)
 	- Interface pretty
 		- colors, font, layout
-	- Don't reuse words
-		- Push to different array
-		- Check word against that array before we use it
 		
 
 Parks: <a href='http://www.freepik.com/free-vector/background-of-mountains-at-sunset_1051640.htm'>Designed by Freepik</a>

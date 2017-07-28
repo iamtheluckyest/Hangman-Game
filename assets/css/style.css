@@ -1,13 +1,34 @@
+body {
+	font-size: 2em;
+}
+
 .jumbotron {
 	text-align: center;
 }
 
-div[class^="col-"] {
-	background-color: #eee;
-}
-
 .outer-box div[class^="col-"] {
-	border: 1px solid #ddd;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+.game-holder{
+	margin-right:-15px;
+	margin-left: -15px;
+	border-radius:6px;
+}
+
+@media screen and (max-width: 768px) {
+	.container .jumbotron,
+	.game-holder {
+		border-radius:0px;
+		border: none;
+	}
+	
+	.container .jumbotron {
+		margin-bottom: 0px;
+	}
+	.game-holder{
+		overflow: hidden;
+	}
+
 }

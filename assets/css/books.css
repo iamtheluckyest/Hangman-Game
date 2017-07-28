@@ -1,0 +1,29 @@
+body {
+	background: url("../images/books-bg.jpg") repeat fixed center;
+	background-size: 50% auto;
+	color: #cb3536;
+}
+
+.jumbotron,
+.game-holder {
+	background-color: #f4de94;
+	border: 3px solid #cb3536;
+}
+
+img {
+	margin-right:auto;
+	margin-left:auto;
+	background-color:transparent;
+}
+
+@media screen and (max-width: 768px) {
+	.container .jumbotron,
+	.game-holder {
+		background-color: rgba(244,222,148, .6);
+	}
+	body {
+		background-size:200% auto;
+	}
+
+
+}

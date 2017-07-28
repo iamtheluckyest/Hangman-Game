@@ -1,6 +1,10 @@
 var wins = 0;
+var losses = 0;
 var start;
 var usedWords = [];
+var parks = ["Zion", "Canyonlands", "Everglades", "Gettysburg"];
+var remainingWords = parks;
+
 
 
 function startGame() {
@@ -16,42 +20,36 @@ function startGame() {
 startGame();
 function playHangman() {
 
-	var guessesLeft = 10;
+	var guessesLeft = 8;
 	var lettersUsed = [];
-	var parks = ["Zion", "Canyonlands", "Everglades", "Gettysburg"];
 	var randWord = chooseRandWord();
-	console.log("type of randWord is: " + typeof randWord);
 	var blanks = "";
 
 	
 	//Set up text on page
 	document.getElementById("instructions").textContent = "Guess a letter!";
-	document.getElementById("guesses-left").textContent = guessesLeft;
-	document.getElementById("incorrect-letters-used").textContent = "";
+	document.getElementById("guesses-left").textContent = "You have " + guessesLeft + " guesses left.";
 	document.getElementById("wins").textContent = wins;
+	document.getElementById("losses").textContent = losses;
+	document.getElementById("incorrect-letters-used").innerHTML = "Incorrect letters used:&nbsp;<br>&nbsp;"
+	document.getElementById("hangman-img").src = "assets/images/hangman"+ guessesLeft +".png"
 
 	//Computer chooses word
-	function chooseRandWord() {
-		var chosenWord = "";
-		if (usedWords.length === parks.length) {
-			alert("There are no more words! Refresh the browser to play again")
-			return;
-		}
-		else if (usedWords.indexOf(chosenWord) > -1) {
-			chosenWord = parks[Math.floor(Math.random()*parks.length)];
-			console.log("picked word: " + chosenWord);
-			console.log("usedWords so far is: " + usedWords);
-			chooseRandWord();
-		}
-		else {
-			usedWords.push(chosenWord);
-			console.log(usedWords);
-			console.log("type of picked word is: " + typeof chosenWord);
-			debugger;
-			return chosenWord;
 
+	function chooseRandWord() {
+		if (typeof remainingWords[0] === 'undefined'){
+			setTimeout(function() {
+				alert("You used up all the words! Refresh the browser to play again.")
+			},1);
+		} 
+		else { 
+			var chosenWord = "";
+			console.log(remainingWords);
+			chosenWord = remainingWords[Math.floor(Math.random()*remainingWords.length)];
+			remainingWords.splice(parks.indexOf(chosenWord), 1)
+			console.log(remainingWords);
+			return chosenWord;	
 		}
-	
 	}
 
 	//Set up blanks
@@ -81,7 +79,7 @@ function playHangman() {
 		var letterChoice = event.key;
 		
 		// If already used, prompt to try again
-		if (lettersUsed.toString().search(letterChoice) > -1) { //use indexOf instead
+		if (lettersUsed.toString().toLowerCase().search(letterChoice.toLowerCase()) > -1) { //use indexOf instead
 			document.getElementById("instructions").textContent = "You've already used that letter. Try again!"
 		}
 		
@@ -93,29 +91,17 @@ function playHangman() {
 
 			//Inform of loss
 			if (guessesLeft == 0) {
-				setTimeout(function() {
-					if (confirm("You lost! Start over?") === true){
-					playHangman();
-					} 
-					else {
-						document.getElementById("instructions").textContent = "Press the spacebar to start a new game.";
-						startGame();
-					}
-				},1);
+				losses++;
+				document.getElementById("instructions").innerHTML = "You lost!<br>Press the spacebar to start a new game.";
+				startGame();
 			} //end inform of loss
 
 			//Inform of win
 			if (blanks.search("_") === -1) {
 				wins++;
-				setTimeout(function() {
-					if (confirm("You won! Start over?") === true){
-						playHangman();
-					}
-					else {
-						document.getElementById("instructions").textContent = "Press the spacebar to start a new game.";
-						startGame();
-					}
-				},1);	
+				document.getElementById("hangman-img").src = "assets/images/hangman-win.png";
+				document.getElementById("instructions").innerHTML = "You won!<br>Press the spacebar to start a new game.";
+				startGame();
 			} //end inform of win
 		}
 		// If not a valid character, prompt to try again
@@ -140,7 +126,8 @@ function playHangman() {
 		// Add incorrect letter to list and reduce guesses
 		if (fillIn == blanks) {
 			guessesLeft--;
-			document.getElementById("guesses-left").textContent = guessesLeft;
+			document.getElementById("hangman-img").src = "assets/images/hangman"+ guessesLeft +".png"
+			document.getElementById("guesses-left").textContent = "You have " + guessesLeft + " guesses left.";
 			document.getElementById("incorrect-letters-used").textContent += " " + letterChoice;
 		}
 		lettersUsed.push(letterChoice);
