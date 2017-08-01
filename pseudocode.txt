@@ -19,13 +19,26 @@ Pseudo code: Hangman
 		
 
 Extras:
-	- Hangman guy
-		- 10 pictures
 	- Different arrays for different themes
 		- pick theme
-		- according to theme, load different CSS (bg image, theme colors)
-	- Interface pretty
-		- colors, font, layout
+
+	- To make different themes...
+		- Need empty page with theme pickers 
+			- should put in jumbotron as buttons
+			- div beneath can be empty/nonexistent
+			- buttons can stay in jumbotron in case user wants to pick a different theme
+		- on click, js picks a different array
+			- based on the array, js assigns a different stylesheet
+	- Still need to:
+		- reset hang man images
+		- clean up code
+			- jQuery
+			- make reset function to reset the game
+			- organize?
+		- revisit styles + colors
+		- 
+		
+			
 		
 
 Parks: <a href='http://www.freepik.com/free-vector/background-of-mountains-at-sunset_1051640.htm'>Designed by Freepik</a>

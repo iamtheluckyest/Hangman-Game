@@ -20,7 +20,7 @@
 				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/YosemitePark2_amk.jpg/1024px-YosemitePark2_amk.jpg"
 			},
 			Arches : {
-				fact: "This site features more than 2,000 natural sandstone arches, with some of the most popular arches in the park being Delicate Arch, Landscape Arch and Double Arch.[13] Millions of years of erosion have created these structures located in a desert climate where the arid ground has life-sustaining biological soil crusts and potholes that serve as natural water-collecting basins. Other geologic formations include stone pinnacles, fins, and balancing rocks.",
+				fact: "This site features more than 2,000 natural sandstone arches, with some of the most popular arches in the park being Delicate Arch, Landscape Arch and Double Arch. Millions of years of erosion have created these structures located in a desert climate where the arid ground has life-sustaining biological soil crusts and potholes that serve as natural water-collecting basins. Other geologic formations include stone pinnacles, fins, and balancing rocks.",
 				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Delicatearch1.jpg/800px-Delicatearch1.jpg"
 			}
 		},
@@ -60,13 +60,13 @@
 				img: "https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/f0f72953-7f64-4530-9c8a-c24f3a2f4fee.jpg._CB304080866__SL300__.jpg"
 			},
 			'Chronicles of Narnia' : {
-				fact: "The Chronicles of Narnia is a series of seven fantasy novels by C. S. Lewis. It is considered a classic of children's literature and is the author's best-known work, having sold over 100 million copies in 47 languages.[1][2] Written by Lewis, illustrated by Pauline Baynes, and originally published in London between 1950 and 1956, The Chronicles of Narnia has been adapted several times, complete or in part, for radio, television, the stage, and film.",
+				fact: "The Chronicles of Narnia is a series of seven fantasy novels by C. S. Lewis. It is considered a classic of children's literature and is the author's best-known work, having sold over 100 million copies in 47 languages. Written by Lewis, illustrated by Pauline Baynes, and originally published in London between 1950 and 1956, The Chronicles of Narnia has been adapted several times, complete or in part, for radio, television, the stage, and film.",
 				img: "https://upload.wikimedia.org/wikipedia/en/c/cb/The_Chronicles_of_Narnia_box_set_cover.jpg"
 			}	
 		},
 		stars : {
 			Orion : {
-				fact: "Orion was named after a hunter in Greek mythology. The earliest depiction that has been linked to the constellation of Orion is a prehistoric (Aurignacian) mammoth ivory carving found in a cave in the Ach valley in West Germany in 1979. Archaeologists have estimated it to have been fashioned approximately 32,000 to 38,000 years ago.[2][3][4] The distinctive pattern of Orion has been recognized in numerous cultures around the world, and many myths have been associated with it.",
+				fact: "Orion was named after a hunter in Greek mythology. The earliest depiction that has been linked to the constellation of Orion is a prehistoric (Aurignacian) mammoth ivory carving found in a cave in the Ach valley in West Germany in 1979. Archaeologists have estimated it to have been fashioned approximately 32,000 to 38,000 years ago. The distinctive pattern of Orion has been recognized in numerous cultures around the world, and many myths have been associated with it.",
 				img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Orion_3008_huge.jpg/800px-Orion_3008_huge.jpg"
 			}, 
 			Sagittarius: {
@@ -124,8 +124,8 @@ $(document).ready(function() {
 
 		
 		//Set up text on page
-		document.getElementById("instructions").textContent = "Guess a letter!";
-		document.getElementById("guesses-left").textContent = "You have " + guessesLeft + " guesses left.";
+		$("#instructions").html("Guess a letter!");
+		$("#guesses-left").html("You have " + guessesLeft + " guesses left.");
 		document.getElementById("wins").textContent = wins;
 		document.getElementById("losses").textContent = losses;
 		document.getElementById("incorrect-letters-used").innerHTML = "Incorrect letters used:&nbsp;<br>&nbsp;"
