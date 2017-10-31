@@ -109,6 +109,8 @@ $(document).ready(function() {
 		document.onkeyup = function(event){
 			var start = event.key;
 			if 	(start==' '){
+				$("#win-fact").empty();
+				$("#win-img").attr("src", "")
 				playHangman();
 			}
 		}
@@ -126,10 +128,10 @@ $(document).ready(function() {
 		//Set up text on page
 		$("#instructions").html("Guess a letter!");
 		$("#guesses-left").html("You have " + guessesLeft + " guesses left.");
-		document.getElementById("wins").textContent = wins;
-		document.getElementById("losses").textContent = losses;
-		document.getElementById("incorrect-letters-used").innerHTML = "Incorrect letters used:&nbsp;<br>&nbsp;"
-		document.getElementById("hangman-img").src = "assets/images/hangman"+ guessesLeft +".png"
+		$("#wins").text = wins;
+		$("#losses").text = losses;
+		$("#incorrect-letters-used").html = "Incorrect letters used:&nbsp;<br>&nbsp;"
+		$("hangman-img").attr("src", "assets/images/hangman"+ guessesLeft +".png")
 
 
 		//Computer chooses word
@@ -137,7 +139,6 @@ $(document).ready(function() {
 		function chooseRandWord() {
 			if (typeof remainingWords[0] === 'undefined'){
 				$("#instructions").html("You used up all the words! Choose a new topic.");
-				
 			} 
 			else { 
 				var chosenWord = "";
@@ -179,7 +180,7 @@ $(document).ready(function() {
 			
 			// If valid character, check if it is found in the word
 			else if (letterChoice == letterChoice.match(/[a-z]/i)) {
-				document.getElementById("instructions").textContent = "Guess another letter!"
+				$("#instructions").text = "Guess another letter!"
 				blanks = checkLetter(letterChoice);
 				printBlanks();
 
@@ -222,9 +223,9 @@ $(document).ready(function() {
 			// Add incorrect letter to list and reduce guesses
 			if (fillIn == blanks) {
 				guessesLeft--;
-				document.getElementById("hangman-img").src = "assets/images/hangman"+ guessesLeft +".png"
-				document.getElementById("guesses-left").textContent = "You have " + guessesLeft + " guesses left.";
-				document.getElementById("incorrect-letters-used").textContent += " " + letterChoice;
+				$("#hangman-img").src = "assets/images/hangman"+ guessesLeft +".png"
+				$("#guesses-left").text = "You have " + guessesLeft + " guesses left.";
+				$("incorrect-letters-used").text += " " + letterChoice;
 			}
 			lettersUsed.push(letterChoice);
 			
